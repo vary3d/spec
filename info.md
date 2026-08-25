@@ -2,6 +2,8 @@
 
 Listing seed next to the entry `.scad`. This is not a brief, not a variant file, and not print-only docs.
 
+This file is **on-disk interchange** (a skill package, a git folder, Import from folder). The site does **not** persist `info.json` as a document. Import maps fields onto a **draft model** (name, description, category, tags, license, origin, entry code, cover, Docs from `print`). Do not put server ids, R2 paths, or `status` / `visibility` in the file. `slug` identifies the folder only; the public URL slug is assigned after review.
+
 ```json
 {
   "format": "vary3d.info",

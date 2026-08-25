@@ -8,6 +8,12 @@ It is not the website source, not an STL warehouse, and not an OpenSCAD include 
 
 The format does **not** upload models for you. Keep the upstream license; Forked from is required when the design is not original. Guests can still tweak parameters in the browser and export STL / 3MF.
 
+## On disk, not the server
+
+`info.json` and `variants.json` are an **on-disk interchange format** (git, skill output, Import from folder). They are **not** how Vary3D stores a model.
+
+On import the site **maps** the files into draft models and draft variants: listing columns, OpenSCAD on object storage, documentation from `print`, and per-variant parameter snapshots. It does **not** keep the JSON documents as blobs. `info.slug` is a folder hint only; the site assigns a public slug after review. Variant files must not include the site’s `__vary` envelope — that is added when the snapshot is saved.
+
 ## Documents
 
 | Doc | Topic |

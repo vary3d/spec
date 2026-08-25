@@ -1,6 +1,8 @@
 # variants.json (`vary3d.variants` v1)
 
-Named parameter presets. No images in this file. The interchange JSON does **not** use `__vary`; that envelope is an implementation detail on the site.
+Named parameter presets. No images in this file.
+
+This file is **on-disk interchange** (export / import, skill packages, git). The site does **not** store `vary3d.variants` JSON as the database row. On import each preset becomes a **draft variant** whose `parametersJson` uses the site envelope (`__vary`). Do **not** write `__vary` into this file; importers add it.
 
 ```json
 {

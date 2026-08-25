@@ -14,6 +14,8 @@ models/<slug>/
 
 `<slug>` must match `info.json` → `slug`. Use lowercase kebab-case.
 
+`info.json` and `variants.json` live in this folder so tools and git can round-trip a package. After **Import from folder**, Vary3D copies their fields into the draft — it does not store those files as the server document. See [info.md](info.md) and [variants.md](variants.md).
+
 ## Required to play on Vary3D
 
 - A valid `info.json` (`format`: `vary3d.info`)
