@@ -52,6 +52,8 @@ This file is **on-disk interchange** (a skill package, a git folder, Import from
 
 Set `originType` to `fork` and fill what you know: `sourceUrl`, `originalAuthor`, `sourceLicense`, `attribution`. Keep the upstream `LICENSE` file next to the code. Do not replace it with a Vary3D copyright.
 
+Do **not** write `parentModelId` unless it is a real Vary3D model id you already have. Never invent one; omit the field.
+
 ## Print notes
 
 Optional `print` object maps to Docs on the site, not to a database column:
