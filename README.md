@@ -24,7 +24,7 @@ On import the site **maps** the files into draft models and draft variants: list
 | [customizer.md](customizer.md) | Minimum Customizer comments |
 | [params-scad.md](params-scad.md) | Root `params.scad` (shared parameters) |
 
-Agent authors: [vary3d/skills](https://github.com/vary3d/skills). Catalog: [vary3d/library](https://github.com/vary3d/library).
+Agent skills: [openscad-customizer](https://github.com/vary3d/openscad-customizer) (write `.scad`) and [model-package](https://github.com/vary3d/model-package) (import folder). Catalog: [vary3d/library](https://github.com/vary3d/library). Index: [vary3d/skills](https://github.com/vary3d/skills).
 
 ## Issues
 
