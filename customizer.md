@@ -53,6 +53,8 @@ Comments, group titles, and parameter descriptions default to **English**. They 
 
 Assignments must be **literals**. Do not put `width = base * 2;` before the first module — that is not an editable slider. Derived values go inside the module.
 
+**Few knobs.** Expose only what the reader will tune. Standard-part fits and print details stay in the module or under `/* [Hidden] */`; inner dims are derived from the knobs. Simple parts: about 8 or fewer visible sliders.
+
 Helper modules with no literal defaults must not be the first `module` in the file (or they steal the Customizer parse window). Put helpers **after** the main module.
 
 ## Color knobs
