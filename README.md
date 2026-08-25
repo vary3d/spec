@@ -32,4 +32,4 @@ MIT. See [LICENSE](LICENSE). Spec text describes the format; models you publish 
 
 ## Security
 
-See [SECURITY.md](SECURITY.md). Email **hello@vary3d.com**. Do not post proofs of concept in public issues.
+See [SECURITY.md](SECURITY.md). Email **security@vary3d.com**. Do not post proofs of concept in public issues.
