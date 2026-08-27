@@ -2,7 +2,7 @@
 
 Listing seed next to the entry `.scad`. This is not a brief, not a variant file, and not print-only docs.
 
-This file is **on-disk interchange** (a skill package, a git folder, Import from folder). The site does **not** persist `info.json` as a document. Import maps fields onto a **draft model** (name, description, category, tags, license, origin, entry code, cover, Docs from `print`). Do not put server ids, R2 paths, or `status` / `visibility` in the file. `slug` identifies the folder only; the public URL slug is assigned after review.
+This file is **on-disk interchange** (a publish folder, a git folder, Import from folder). The site does **not** persist `info.json` as a document. Import maps fields onto a **draft model** (name, description, category, tags, license, origin, entry code, cover, Docs from `print`). Do not put server ids, object-storage paths, or `status` / `visibility` in the file. `slug` identifies the folder only; the public URL slug is assigned after review.
 
 ```json
 {
@@ -35,9 +35,9 @@ This file is **on-disk interchange** (a skill package, a git folder, Import from
 |---|---|
 | `slug` | Same as the folder name |
 | `name` | Short English title, ≤100 characters |
-| `description` | Short summary, ≤800. No slice recipe or assembly steps here |
+| `description` | ≤800. Cards show the first sentence or two — lead with object + mate/feature. More sentences are optional. No slice recipe or assembly steps |
 | `category` | One of the six values below |
-| `tags` | ≤10 English tokens; function/object; do not repeat the category name |
+| `tags` | About 3 English tokens (max 5). Axes: object, mate, distinctive feature; scene only if the object name is generic. Do not repeat the category; do not pad |
 | `license` | Default `MIT`. Do not use ND |
 | `originType` | `original` or `fork` |
 | `engineType` | `openscad` |

@@ -18,7 +18,7 @@ On import the site **maps** the files into draft models and draft variants: list
 
 | Doc | Topic |
 |---|---|
-| [directory.md](directory.md) | `models/<slug>/` layout |
+| [directory.md](directory.md) | `packages/<slug>/` publish layout (`models/<slug>/` is the design working copy) |
 | [info.md](info.md) | `info.json` (`vary3d.info` v1) |
 | [variants.md](variants.md) | `variants.json` (`vary3d.variants` v1) |
 | [customizer.md](customizer.md) | Minimum Customizer comments |
