@@ -40,20 +40,20 @@ module angle_bracket(
 
 | Rule | How |
 |---|---|
-| Groups | `/* [Group Name] */` on its own line, English |
-| Description | `// …` on the **line above** the assignment, English, written for the slider user |
+| Groups | `/* [Group Name] */` on its own line, English (keep existing local-language labels when editing an existing file) |
+| Description | `// …` on the **line above** the assignment, English, written for the slider user (keep existing labels when editing) |
 | Numeric slider | `name = 80; // [40:1:150]` → min : step : max |
 | Enum | `mode = "yes"; // [yes:Yes, no:No]` |
 | Color | Parameter name ends with `_color`; default `"#RRGGBB"` (or an SVG color name); trailing `// color` |
-| Hidden | Put derived constants under `/* [Hidden] */` |
+| Hidden | Assignable overrides only (`fit_gap`, standard OD). Derived sizes are **inside** the module, not Hidden |
 | Names | Full `snake_case`: `flange_length`, not `fl` |
-| Booleans | Prefer `"yes"` / `"no"` enums over bare `true` / `false` |
+| Booleans | Prefer `"yes"` / `"no"` enums for the site panel; bare `true` / `false` still parse |
 
-Comments, group titles, and parameter descriptions default to **English**. They are listing copy; the site may translate after publish.
+Comments, group titles, and parameter descriptions default to **English** for new copy. Keep existing local-language labels when editing an existing file — the site translates after publish.
 
 Assignments must be **literals**. Do not put `width = base * 2;` before the first module — that is not an editable slider. Derived values go inside the module.
 
-**Few knobs.** Expose only what the reader will tune. Standard-part fits and print details stay in the module or under `/* [Hidden] */`; inner dims are derived from the knobs. Simple parts: about 8 or fewer visible sliders.
+Knob count, routing (simple vs complex), mate-holder, and split-of-one-article rules are **generation policy** in the openscad-customizer skill, not a format gate. The site parses every top-level literal; Import does not enforce a cap.
 
 Helper modules with no literal defaults must not be the first `module` in the file (or they steal the Customizer parse window). Put helpers **after** the main module.
 

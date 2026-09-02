@@ -4,6 +4,8 @@ Named parameter presets. Do **not** embed image bytes (no base64, no data URLs).
 
 This file is **on-disk interchange** (export / import, skill packages, git). The site does **not** store `vary3d.variants` JSON as the database row. On import each preset becomes a **draft variant** whose `parametersJson` uses the site envelope (`__vary`). Do **not** write `__vary` into this file; importers add it.
 
+A package [README.md](package-readme.md) may show each preset’s image and `params` table under Presets. The site still reads this JSON for variant snapshots. Preset covers are rendered with OpenSCAD `-D` on the preview entry so Global keys in [params.scad](params-scad.md) apply.
+
 ```json
 {
   "format": "vary3d.variants",
@@ -48,7 +50,7 @@ This file is **on-disk interchange** (export / import, skill packages, git). The
 
 ## File variants
 
-Keys in `files` are relative paths with `/`, no `..`, no leading `/`, no Windows drives. Examples: `model.scad`, `lib/helper.scad`.
+Keys in `files` are relative paths with `/`, no `..`, no leading `/`, no Windows drives. Keys are **exportable build roots** (e.g. `model.scad`, `divider.scad`); do not key presets onto library files (`lib/…`, `geometry.scad`).
 
 Each item:
 

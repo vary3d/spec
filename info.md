@@ -1,8 +1,10 @@
 # info.json (`vary3d.info` v1)
 
-Listing seed next to the entry `.scad`. This is not a brief, not a variant file, and not print-only docs.
+Listing seed next to the entry `.scad`. This is not a brief, not a variant file, and not the model long-form.
 
-This file is **on-disk interchange** (a publish folder, a git folder, Import from folder). The site does **not** persist `info.json` as a document. Import maps fields onto a **draft model** (name, description, category, tags, license, origin, entry code, cover, Docs from `print`). Do not put server ids, object-storage paths, or `status` / `visibility` in the file. `slug` identifies the folder only; the public URL slug is assigned after review.
+This file is **on-disk interchange** (a publish folder, a git folder, Import from folder). The site does **not** persist `info.json` as a document. Import maps fields onto a **draft model** (name, description, category, tags, license, origin, entry code, cover). Documentation comes from package [README.md](package-readme.md), not from this JSON. Do not put server ids, object-storage paths, or `status` / `visibility` in the file. `slug` identifies the folder only; the public URL slug is assigned after review.
+
+Do **not** write `print`. Print, assembly, and customize notes live in the README `## Print` (and Files) sections.
 
 ```json
 {
@@ -18,12 +20,7 @@ This file is **on-disk interchange** (a publish folder, a git folder, Import fro
   "originType": "original",
   "engineType": "openscad",
   "entry": "model.scad",
-  "cover": "cover.png",
-  "print": {
-    "settings": "PLA, 0.2mm layer, 2 walls, 15% gyroid infill, no supports.",
-    "orientation": "Place a flange on the bed.",
-    "why": "Keeps honeycomb walls near vertical."
-  }
+  "cover": "cover.png"
 }
 ```
 
@@ -54,16 +51,6 @@ Set `originType` to `fork` and fill what you know: `sourceUrl`, `originalAuthor`
 
 Do **not** write `parentModelId` unless it is a real Vary3D model id you already have. Never invent one; omit the field.
 
-## Print notes
-
-Optional `print` object maps to Docs on the site, not to a database column:
-
-- `settings` — material, layer, walls, infill, supports
-- `orientation` — how to place it on the bed
-- `why` — why that orientation or recipe
-
-Omit `print` for non-printable sculptures.
-
 ## Do not write
 
-Platform ids (`id`, `userId`), R2 paths, `status` / `visibility`, `engineVersion`, `*I18n` blobs, or view counts. Those are server fields.
+`print` (use README `## Print`; validators reject this key). Platform ids (`id`, `userId`), R2 paths, `status` / `visibility`, `engineVersion`, `*I18n` blobs, or view counts. Those are server fields.
